@@ -1,16 +1,13 @@
 import React from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { ShowAnimatedAnimation } from './src/ShowAnimatedAnimation';
-import { ShowFrameAnimation } from './src/ShowFrameAnimation';
 import { ShowLayoutAnimation } from './src/ShowLayoutAnimation';
 const App = () => {
     return (<SafeAreaView style={styles.backgroundStyle}>
       <StatusBar barStyle={'dark-content'}/>
       <View style={styles.container}>
-        <ShowFrameAnimation />
         <ShowLayoutAnimation />
-        <ShowAnimatedAnimation />
+        {/*<ShowAnimatedAnimation />*/}
       </View>
     </SafeAreaView>);
 };
