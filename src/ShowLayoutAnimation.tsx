@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {Button, Image, LayoutAnimation, View} from 'react-native';
+import {Image, LayoutAnimation, View} from 'react-native';
+import {MyButton} from './MyButton';
 
 export const ShowLayoutAnimation = () => {
   const [showImg, setShowImage] = useState(false);
@@ -50,20 +51,6 @@ export const ShowLayoutAnimation = () => {
         <MyButton title={'update'} onPress={updateAnima} />
         <MyButton title={'delete'} onPress={deleteAnima} />
       </View>
-    </View>
-  );
-};
-
-const MyButton = (props: {title: string; onPress: () => void}) => {
-  return (
-    <View
-      style={{
-        borderRadius: 5,
-        backgroundColor: '#1c75ff',
-        marginHorizontal: 10,
-        paddingHorizontal: 10,
-      }}>
-      <Button title={props.title} color={'white'} onPress={props.onPress} />
     </View>
   );
 };
