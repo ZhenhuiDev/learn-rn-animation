@@ -1,11 +1,18 @@
 import React from 'react';
-import { Platform, SafeAreaView, StatusBar, StyleSheet, UIManager, View } from "react-native";
+import {
+  Platform,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  UIManager,
+  View,
+} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {ShowLayoutAnimation} from './src/ShowLayoutAnimation';
 
 if (Platform.OS === 'android') {
-  UIManager.setLayoutAnimationEnabledExperimental
-  && UIManager.setLayoutAnimationEnabledExperimental(true);
+  UIManager.setLayoutAnimationEnabledExperimental &&
+    UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
 const App = () => {
