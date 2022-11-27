@@ -1,7 +1,7 @@
 import { View } from 'react-native';
 import React, { useState } from 'react';
 import { MyButton } from './MyButton';
-import { DecayAnimation } from './effect/DecayAnimation';
+import { SpringAnimation } from './effect/SpringAnimation';
 export const ShowAnimatedAnimation = () => {
     const [isStart, setStart] = useState(false);
     return (<View style={{
@@ -11,7 +11,8 @@ export const ShowAnimatedAnimation = () => {
             alignItems: 'center',
         }}>
       {/*<TimingAnimation started={isStart} />*/}
-      <DecayAnimation started={isStart}/>
+      {/*<DecayAnimation started={isStart} />*/}
+      <SpringAnimation started={isStart}/>
       <View style={{
             position: 'absolute',
             bottom: 30,

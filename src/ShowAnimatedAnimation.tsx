@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import {MyButton} from './MyButton';
 import { TimingAnimation } from './effect/TimingAnimation';
 import { DecayAnimation } from './effect/DecayAnimation';
+import { SpringAnimation } from './effect/SpringAnimation';
 
 export interface AnimationProps {
   started: boolean;
@@ -19,7 +20,8 @@ export const ShowAnimatedAnimation = () => {
         alignItems: 'center',
       }}>
       {/*<TimingAnimation started={isStart} />*/}
-      <DecayAnimation started={isStart} />
+      {/*<DecayAnimation started={isStart} />*/}
+      <SpringAnimation started={isStart} />
       <View
         style={{
           position: 'absolute',
