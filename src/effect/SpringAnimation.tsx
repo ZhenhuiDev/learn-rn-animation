@@ -1,7 +1,7 @@
-import {Animated, Easing, View} from 'react-native';
+import {Animated, View} from 'react-native';
 import React, {useEffect, useRef} from 'react';
-import { Line } from './Line';
-import { AnimationProps } from '../ShowAnimatedAnimation';
+import {Line} from './Line';
+import {AnimationProps} from '../ShowAnimatedAnimation';
 
 export const SpringAnimation = (props: AnimationProps) => {
   const animatedMarginLeft1 = useRef(new Animated.Value(10)).current;
@@ -56,10 +56,22 @@ export const SpringAnimation = (props: AnimationProps) => {
         flexDirection: 'column',
         justifyContent: 'center',
       }}>
-      <Line desc={'stiffness: 100, damping: 10, mass: 1 '} value={animatedMarginLeft1} />
-      <Line desc={'stiffness: 150, damping: 10, mass: 1 '} value={animatedMarginLeft2} />
-      <Line desc={'stiffness: 100, damping: 20, mass: 1 '} value={animatedMarginLeft3} />
-      <Line desc={'stiffness: 100, damping: 10, mass: 2 '} value={animatedMarginLeft4} />
+      <Line
+        desc={'stiffness: 100, damping: 10, mass: 1 '}
+        value={animatedMarginLeft1}
+      />
+      <Line
+        desc={'stiffness: 150, damping: 10, mass: 1 '}
+        value={animatedMarginLeft2}
+      />
+      <Line
+        desc={'stiffness: 100, damping: 20, mass: 1 '}
+        value={animatedMarginLeft3}
+      />
+      <Line
+        desc={'stiffness: 100, damping: 10, mass: 2 '}
+        value={animatedMarginLeft4}
+      />
     </View>
   );
 };
