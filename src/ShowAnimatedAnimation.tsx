@@ -1,7 +1,12 @@
-import {Animated, View} from 'react-native';
-import React, { useRef, useState } from 'react';
+import {View} from 'react-native';
+import React, { useState } from 'react';
 import {MyButton} from './MyButton';
 import { TimingAnimation } from './effect/TimingAnimation';
+import { DecayAnimation } from './effect/DecayAnimation';
+
+export interface AnimationProps {
+  started: boolean;
+}
 
 export const ShowAnimatedAnimation = () => {
   const [isStart, setStart] = useState(false);
@@ -13,7 +18,8 @@ export const ShowAnimatedAnimation = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <TimingAnimation started={isStart} />
+      {/*<TimingAnimation started={isStart} />*/}
+      <DecayAnimation started={isStart} />
       <View
         style={{
           position: 'absolute',

@@ -1,5 +1,6 @@
-import { Animated, Easing, Text, View } from 'react-native';
+import { Animated, Easing, View } from 'react-native';
 import React, { useEffect, useRef } from 'react';
+import { Line } from './Line';
 export const TimingAnimation = (props) => {
     const animatedMarginLeft1 = useRef(new Animated.Value(10)).current;
     const animatedMarginLeft2 = useRef(new Animated.Value(10)).current;
@@ -32,21 +33,5 @@ export const TimingAnimation = (props) => {
         }}>
       <Line desc={'Easing.linear: '} value={animatedMarginLeft1}/>
       <Line desc={'Easing.cubic: '} value={animatedMarginLeft2}/>
-    </View>);
-};
-const Line = (props) => {
-    return (<View style={{
-            width: '100%',
-            flexDirection: 'row',
-            alignItems: 'center',
-            marginTop: 3,
-        }}>
-      <Text style={{ width: 100 }}>{props.desc}</Text>
-      <Animated.View style={{
-            width: 50,
-            height: 30,
-            marginLeft: props.value,
-            backgroundColor: '#abc',
-        }}/>
     </View>);
 };
