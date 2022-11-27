@@ -1,19 +1,23 @@
-import { Animated, StyleSheet } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import { View } from 'react-native';
+import React, { useState } from 'react';
+import { MyButton } from './MyButton';
+import { TimingAnimation } from './effect/TimingAnimation';
 export const ShowAnimatedAnimation = () => {
-    const [animatedValue] = useState(new Animated.Value(1));
-    useEffect(() => {
-        Animated.timing(animatedValue, {
-            toValue: 0,
-            duration: 1000,
-            useNativeDriver: false,
-        }).start();
-    }, [animatedValue]);
-    return (<Animated.Image style={{ ...styles.imageStyle, opacity: animatedValue }} source={require('../assets/react-icon.png')} resizeMode={'center'}/>);
+    const [isStart, setStart] = useState(false);
+    return (<View style={{
+            flex: 1,
+            width: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+        }}>
+      <TimingAnimation started={isStart}/>
+      <View style={{
+            position: 'absolute',
+            bottom: 30,
+            flexDirection: 'row',
+        }}>
+        <MyButton title={'start'} onPress={() => setStart(true)}/>
+        <MyButton title={'reset'} onPress={() => setStart(false)}/>
+      </View>
+    </View>);
 };
-const styles = StyleSheet.create({
-    imageStyle: {
-        width: 100,
-        height: 100,
-    },
-});

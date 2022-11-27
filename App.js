@@ -1,17 +1,17 @@
 import React from 'react';
-import { Platform, SafeAreaView, StatusBar, StyleSheet, UIManager, View } from "react-native";
+import { Platform, SafeAreaView, StatusBar, StyleSheet, UIManager, View, } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { ShowLayoutAnimation } from './src/ShowLayoutAnimation';
+import { ShowAnimatedAnimation } from './src/ShowAnimatedAnimation';
 if (Platform.OS === 'android') {
-    UIManager.setLayoutAnimationEnabledExperimental
-        && UIManager.setLayoutAnimationEnabledExperimental(true);
+    UIManager.setLayoutAnimationEnabledExperimental &&
+        UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 const App = () => {
     return (<SafeAreaView style={styles.backgroundStyle}>
       <StatusBar barStyle={'dark-content'}/>
       <View style={styles.container}>
-        <ShowLayoutAnimation />
-        {/*<ShowAnimatedAnimation />*/}
+        {/*<ShowLayoutAnimation />*/}
+        <ShowAnimatedAnimation />
       </View>
     </SafeAreaView>);
 };

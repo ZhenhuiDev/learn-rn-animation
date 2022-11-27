@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {ShowLayoutAnimation} from './src/ShowLayoutAnimation';
+import {ShowAnimatedAnimation} from './src/ShowAnimatedAnimation';
 
 if (Platform.OS === 'android') {
   UIManager.setLayoutAnimationEnabledExperimental &&
@@ -20,8 +20,8 @@ const App = () => {
     <SafeAreaView style={styles.backgroundStyle}>
       <StatusBar barStyle={'dark-content'} />
       <View style={styles.container}>
-        <ShowLayoutAnimation />
-        {/*<ShowAnimatedAnimation />*/}
+        {/*<ShowLayoutAnimation />*/}
+        <ShowAnimatedAnimation />
       </View>
     </SafeAreaView>
   );
